@@ -4,7 +4,7 @@ project(linkers_and_loaders)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(test-lib)
-
-add_executable(${PROJECT_NAME} bootstrapper/src/main.cpp)
-
-target_link_libraries(${PROJECT_NAME} PRIVATE test-lib)
+add_subdirectory(dyn-test-lib)
+add_subdirectory(header-only-lib)
+add_subdirectory(static-shared-lib)
+add_subdirectory(bootstrapper)
